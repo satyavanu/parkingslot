@@ -1,0 +1,14 @@
+{
+	"name": "parking-slots",
+	"description": "Simple test parking slots information app",
+	"version": "1.0.1",
+	"homepage": "https://github.com/satyavanu/parkingslot",
+	"license": "MIT",
+	"dependencies": {
+		"angular": "1.2.x",
+		"angular-route": "1.2.x",
+		"angular-loader": "1.2.x",
+		"angular-mocks": "~1.2.x",
+		"html5-boilerplate": "~4.3.0"
+	}
+}

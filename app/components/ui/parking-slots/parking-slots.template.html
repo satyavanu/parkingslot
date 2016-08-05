@@ -1,0 +1,59 @@
+<div data="data" range="limit">
+      <h3>Parking Slots</h3>
+      <hr>
+      <div class="row">
+            <div class="col-md-6">
+                  <div class="list-group items">
+                        <div ng-repeat="items in data">
+                              <div class="list-group-item">
+                                    <div class="row">
+                                          <div class="col-xs-6">
+                                                <a href="#" title="More Info" ng-click="check($event);" data-coordinates="{{items.geometry.coordinates[1]}},{{items.geometry.coordinates[0]}}" data-info="{{items.properties.layers['parking.garage'].data}}">{{items.properties.title}}
+                                                </a>
+                                          </div>
+                                          <div class="col-xs-6">
+                                                <span ng-if="items.properties.layers['parking.garage'].data.FreeSpaceLong > 0" class="btn btn-default btn-circle btn-lg btn-success">P</span></p>
+                                                <span ng-if="items.properties.layers['parking.garage'].data.FreeSpaceLong < 1" class="btn btn-default btn-circle btn-lg  btn-danger">P</span></p>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+            <div class="col-md-6">
+                  <div ng-if="displayMap">
+                        <div class="row">
+                              <h3>{{info.Name}}'s Parking Information</h3>
+                              <table class="table table-striped">
+                                    <thead>
+                                          <tr>
+                                                <th>#</th>
+                                                <th>Short Parking</th>
+                                                <th>Long Parking</th>
+                                                <th>Free Short</th>
+                                                <th>Free Long</th>
+                                          </tr>
+                                    </thead>
+                                    <tbody>
+                                          <tr>
+                                                <th scope="row">1</th>
+                                                <td>{{info.ShortCapacity}}</td>
+                                                <td>{{info.LongCapacity}}</td>
+                                                <td>{{info.FreeSpaceShort}}</td>
+                                                <td>{{info.FreeSpaceLong}} </td>
+                                          </tr>
+                                    </tbody>
+                              </table>
+                        </div>
+                        <div class="row">
+                              <span class="bg-primary"> ** Status at {{info.PubDate | date : 'medium'}} </span>
+                        </div>
+                        <div class="row">
+                              <div class="thumbnail">
+                                    <img class="img-responsive" ng-src="{{mapimage}}" />
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+</div>

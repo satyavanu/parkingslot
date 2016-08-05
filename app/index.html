@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js">
+<!--<![endif]-->
+
+<head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Parking Slot Application</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
+      <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/app.css" />
+      <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body>
+      <div class="container">
+            <header-navigation> </header-navigation>
+            <div class="row">
+                  <div ng-controller='parkingSlotsCtrl as vm'>
+                        <h2> City Parking Information </h2>
+                        <div class="row">
+                              ** Free Slots <span class="btn btn-default btn-circle btn-lg btn-success">P</span> ** No-Free Slots <span class="btn btn-default btn-circle btn-lg btn-danger">P</span>
+                        </div>
+                        <div class="row">
+                        ** Click on Parking Link for more Information
+                        </div>
+                        <parking-slots limit="25" content=parkingSlotsReponse> </parking-slots>
+                  </div>
+                  <footer-navigation> </footer-navigation>
+            </div>
+            <script src="bower_components/angular/angular.js"></script>
+            <script src="bower_components/angular-resource/angular-resource.js"></script>
+            <script src="js/app.js"></script>
+            <script src="js/parkingslots.service.js"></script>
+            <script src="js/controllers.js"></script>
+            <script src="components/ui/header-navigation/header-navigation.directive.js">
+            </script>
+            <script src="components/ui/footer-navigation/footer-navigation.directive.js">
+            </script>
+            <script src="components/ui/parking-slots/parking-slots.directive.js">
+            </script>
+</body>
+
+</html>
