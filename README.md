@@ -1,6 +1,6 @@
 # PARKING-SLOT  angular application
 
-This project  usees modified version of angular-seed skeleton for a typical [AngularJS](http://angularjs.org/) web app.
+This project  uses modified version of angular-seed skeleton for a typical [AngularJS](http://angularjs.org/) web app.
 
 ## Getting Started
 
@@ -8,19 +8,19 @@ To get you started you can simply clone the parking slot repository and install 
 
 ### Prerequisites
 
-You need git to clone the angular-seed repository. You can get it from
+You need git to clone the parkingslot repository. You can get it from
 [http://git-scm.com/](http://git-scm.com/).
 
-We also use a number of node.js tools to initialize and test angular-seed. You must have node.js and
+We also use a number of node.js tools to initialize and test parkingslot. You must have node.js and
 its package manager (npm) installed.  You can get them from [http://nodejs.org/](http://nodejs.org/).
 
 ### Clone parkingslot
 
-Clone the angular-seed repository using [git][git]:
+Clone the parkingslot repository using [git][git]:
 
 ```
 git clone https://github.com/satyavanu/parkingslot.git
-cd angular-seed
+cd parkingslot
 ```
 
 ### Install Dependencies
@@ -44,7 +44,7 @@ folders in your project.
 * `app/bower_components` - contains the angular framework files
 
 *Note that the `bower_components` folder would normally be installed in the root folder but
-angular-seed changes this location through the `.bowerrc` file.  Putting it in the app folder makes
+project  changes this location through the `.bowerrc` file.  Putting it in the app folder makes
 it easier to serve the files by a webserver.*
 
 ### Run the Application
@@ -90,9 +90,6 @@ There are two kinds of tests: Unit tests and End to End tests.
 
 ### Running Unit Tests
 
-The angular-seed app comes preconfigured with unit tests. These are written in
-[Jasmine][jasmine], which we run with the [Karma Test Runner][karma]. We provide a Karma
-configuration file to run them.
 
 * the configuration is found at `test/karma.conf.js`
 * the unit tests are found in `test/unit/`.
@@ -119,9 +116,6 @@ npm run test-single-run
 
 ### End to end testing
 
-The angular-seed app comes with end-to-end tests, again written in [Jasmine][jasmine]. These tests
-are run with the [Protractor][protractor] End-to-End test runner.  It uses native events and has
-special features for Angular applications.
 
 * the configuration is found at `test/protractor-conf.js`
 * the end-to-end tests are found in `test/e2e/`
@@ -134,9 +128,7 @@ can interact with it.
 npm start
 ```
 
-In addition, since Protractor is built upon WebDriver we need to install this.  The angular-seed
-project comes with a predefined script to do this:
-
+In addition, since Protractor is built upon WebDriver we need to install this. 
 ```
 npm run update-webdriver
 ```
@@ -156,7 +148,7 @@ development server.
 
 ## Updating Angular
 
-Previously we recommended that you merge in changes to angular-seed into your own fork of the project.
+Previously we recommended that you merge in changes to application into your own fork of the project.
 Now that the angular framework library code and tools are acquired through package managers (npm and
 bower) you can use these tools instead to update the dependencies.
 
@@ -190,7 +182,7 @@ etc to function properly when an html page is opened via `file://` scheme instea
 
 ### Running the App during Development
 
-The angular-seed project comes preconfigured with a local development webserver.  It is a node.js
+The  project comes preconfigured with a local development webserver.  It is a node.js
 tool called [http-server][http-server].  You can start this webserver with `npm start` but you may choose to
 install the tool globally:
 
